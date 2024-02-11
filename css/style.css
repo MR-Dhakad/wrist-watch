@@ -1,0 +1,420 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0px;
+    font-family: 'segoe ui';
+  }
+  
+  .nav {
+    height: 80px;
+    width: 100%;
+    background-color: #fff;
+    position: relative;
+  }
+  
+  .nav > .nav-header {
+    display: inline;
+  }
+  
+  .nav > .nav-header > .nav-title {
+    display: inline-block;
+    font-size: 22px;
+    color: #000;
+    padding: 10px 10px 10px 10px;
+    margin-top: 20px;
+  }
+  
+  .nav > .nav-btn {
+    display: none;
+  }
+  
+  .nav > .nav-links {
+    display: inline;
+    float: right;
+    font-size: 18px;
+  }
+  
+  .nav > .nav-links > a {
+    display: inline-block;
+    padding: 13px 10px 13px 10px;
+    text-decoration: none;
+    color: #000;
+    margin-top: 20px;
+  }
+  
+  .nav > .nav-links > a:hover {
+    background-color: #7f19c8a6;
+    opacity: 1;
+    color: #fff;
+
+  }
+  
+  .nav > #nav-check {
+    display: none;
+  }
+  
+  @media (max-width:600px) {
+    .nav > .nav-btn {
+      display: inline-block;
+      position: absolute;
+      right: 0px;
+      top: 0px;
+      padding-top: 20px;
+    }
+    .nav > .nav-btn > label {
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      padding: 13px;
+    }
+    .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
+        background-image: linear-gradient(to right top, #8019c8, #0062ec, #0087f0, #00a2e1, #21b7cd);
+    }
+    .nav > .nav-btn > label > span {
+      display: block;
+      width: 25px;
+      height: 10px;
+      border-top: 2px solid #eee;
+    }
+    .nav > .nav-links {
+      position: absolute;
+      display: block;
+      width: 100%;
+      background-image: linear-gradient(to right top, #8019c8, #0062ec, #0087f0, #00a2e1, #21b7cd);
+      height: 0px;
+      transition: all 0.2s ease;
+      overflow-y: hidden;
+      top: 80px;
+      left: 0px;
+
+    }
+    .nav > .nav-links > a {
+      display: block;
+      width: 100%;
+    }
+    .nav > #nav-check:not(:checked) ~ .nav-links {
+      height: 0px;
+      text-align: center;
+    }
+    .nav > #nav-check:checked ~ .nav-links {
+      height: calc(100vh - 50px);
+      overflow-y: auto;
+      z-index: 99;
+      text-align: center;
+      padding-top: 50px;
+    }
+}
+  
+  /* Slider Section */
+ .hero{
+    width: 100%;
+    background-image:url(../img/slider-bg.jpg) ;
+    background-position: top ;
+    background-repeat:no-repeat;
+    height: 700px;
+    background-size: cover;
+  }
+
+  .carousel-content{
+    width: 100%;
+    color: #fff;
+    padding-left: 10%;
+    padding-top: 200px;
+    padding-bottom: 100px;
+  }
+  .carousel-content .button a{
+    color: #fff;
+    text-decoration: none;
+  }
+  .carousel-content .button{
+    border-radius: 0px;
+  }
+  /* services section */
+  
+  .services{
+    display: flex;
+    background-color: #f1f1f191;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  
+  
+  .services .sbox{
+    width: 25%;
+    color: #000;
+    text-align: center;
+    font-family:sans-serif;
+    
+  } 
+
+  /* ******** about us section******* */
+
+.about{
+  width: 100%;
+  /* background-color: #0062ec; */
+  display: flex;
+  padding: 100px 30px 50px 30px;
+  justify-content: space-between;
+  
+}
+.about .pro-a{
+  width: 25%;
+  background-color: rgba(215, 215, 215, 0.442);
+  margin-bottom: 70px;
+}
+.about .pro-b{
+  width: 25%;
+  background-color: rgba(215, 215, 215, 0.442);
+  padding-top: 80px;
+  margin-top: 70px;
+}
+.about .abt-pro img{
+width: 100%;
+} 
+.about-content{
+  width: 45%;
+  color: #000;
+}
+.about-content p{
+  color: #171717;
+   font-size: 18px;
+   margin-top: 40px;
+   margin-bottom: 50px;
+}
+.abt-btn{
+  background-color: #8019c8;
+  width: 150px;
+  border: none;
+}
+.abt-btn:hover {
+  background-color: #590992;
+}
+.abt-btn a{
+  color: #fff;
+  text-decoration: none;
+}
+
+/* ********* top sales section******** */
+
+.collection{
+  width: 100%;
+  background-color: #f5f5f5;
+  padding-bottom: 50px;
+}
+.coln-heading{
+  width: 280px;
+  margin-left: 10%;
+  text-align: center;
+  color: #fff;
+  font-size: 20px;
+  background-color:#19c880;
+  padding: 1px 0px; 
+}
+
+.coln-watch{
+  background-color: #f5f5f5;
+  padding-top: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+.watch-a{
+  background-color: #fff;
+  width: 30%;
+  text-align: center;
+  border: .5px solid #808080;
+
+}
+.watch-a img{
+  width: 40%;
+  margin-top: 50px;
+}
+.coln-watch .watch-a .watch-info{
+  /* background-color: pink; */
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 10px 10px 20px;
+}
+.coln-watch .watch-info .watch-left{
+  color: #000;
+  font-size: 20px;
+  font-family: sans-serif;
+}
+.watch-info .watch-right{
+  color: rgb(213, 173, 16);
+  padding-top: 35px;
+  
+}
+.w-b img{
+  width: 27%;
+}
+.w-c img{
+  width: 32%;
+}
+
+.watch-buy{
+  /* background-color: red; */
+  display: flex;
+  justify-content: space-around;
+  margin-top: 50px;
+}
+
+.watch-buy .buy-btn{
+  width: 120px;
+  background-color: #8019c8;
+  border: none;
+  padding: 10px 0px;
+}
+.watch-buy .buy-b{
+  margin: 0% 15%;
+}
+.coln-watch .w-e img{
+
+  width: 37%;
+}
+.coln-watch .w-f img{
+
+  width: 45%;
+}
+
+/* ****** contact us section **** */
+.contact-mainbox{
+  width: 100%;
+  background-color: rgba(215, 215, 215, 0.442);
+
+}
+.contact-form{
+/* background-color: #0062ec; */
+padding:50px 0px;
+}
+.contact-form form input{
+  width: 50%;
+  height: 50px;
+  border-radius: 5px;
+  border: .3px solid #fafafa;
+  margin-bottom: 30px;
+}
+.contact-form form{
+display: flex;
+flex-direction: column;
+align-items: center;
+
+}
+.contact-heading{
+  width:100%;
+  /* background-color: #19c880; */
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+ color: #000;
+ font-weight: 400;
+}
+.contact-form form button{
+  width: 150px;
+  padding: 10px 1px ;
+  border: 1px solid #000;
+  background-color: #8019c8;
+  transition: all .5s ease ;
+
+}
+.contact-form form button a{
+  text-decoration: none;
+  color: #fff;
+  font-family: sans-serif;
+ 
+}
+.contact-form form button:hover{
+  background-color: #590992;
+  border-radius: 8px;
+}
+.contact-form form ::placeholder{
+ padding-left: 10px;
+ font-size: 17px;
+ color: #000;
+}
+
+/* ******** footer section********** */
+.footer-main{
+  width: 100%;
+  background-color: #0f1521;
+}
+.footer-info{
+  /* background-color: crimson; */
+  display: flex;
+  flex-direction: column;
+}
+.footer-heading{
+  /* background-color:teal; */
+  border-bottom: 1px solid #fff;
+  padding:50px  20px 10px 20px;
+  text-align: center;
+  color: #fff;
+}
+.footer-details{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+  font-size: 16px;
+  margin-top: 50px;
+}
+.about-shop ul{
+  list-style: none;
+  padding: 0px;
+}
+.about-shop .heart{
+  color: crimson;
+}
+
+.about-element{
+  width: 25%;
+}
+/* media queries  */
+@media only screen and (max-width:820px){
+  .about-element{
+    width: 100%;
+    text-align: center;
+  }
+  .footer-details{
+    flex-direction: column-reverse;
+  }
+
+}
+@media only screen and (max-width:960px)   {
+  
+  .services .sbox{
+    width: 50%;
+    /* background-color: #0062ec; */
+    float: right;
+    padding-bottom: 50px;
+  }
+  .services{
+    display:inline-block;
+    width: 100%;
+  }
+
+}
+@media only screen and (max-width:790px){
+  .about{
+    display: inline-block;
+    position: relative;
+
+  }
+  .about-content{
+    width: 100%;
+    margin-top: 130px;
+  }
+  .about .abt-pro{
+    /* float: right; */
+    width: 45%;
+
+  }
+  .pro-b{
+    position: absolute;
+    right: 5%;
+    top: 120px;
+  }
+  .pro-a{
+    padding-bottom: 80px;
+  }
+}
